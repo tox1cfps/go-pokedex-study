@@ -44,4 +44,9 @@ func main() {
 	fmt.Println(user)
 	user.ActivePokemon[0] = Pokemons[1]
 	fmt.Println(user)
+
+	atkResult := user.ActivePokemon[0].PokeAttack(&Pokemons[2])
+	fmt.Println(atkResult)
+	capResult := user.ActivePokemon[0].Capture(&Pokemons[2])
+	fmt.Println(capResult)
 }
