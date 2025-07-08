@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"pokemonGame/pokemon"
 	"pokemonGame/regiao"
+	"pokemonGame/usuario"
 )
 
 func main() {
@@ -33,4 +35,13 @@ func main() {
 	for _, Pokemon := range Pokemons {
 		fmt.Println(Pokemon.GetInfo())
 	}
+
+	user := usuario.Usuario{
+		Name:          "Ash",
+		ActivePokemon: []pokemon.Pokemon{},
+	}
+	user.ActivePokemon = append(user.ActivePokemon, Pokemons[0])
+	fmt.Println(user)
+	user.ActivePokemon[0] = Pokemons[1]
+	fmt.Println(user)
 }
